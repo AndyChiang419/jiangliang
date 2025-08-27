@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Jiang Liang</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Noto+Serif+TC&display=swap" rel="stylesheet">
+  <style>
+    /* 與首頁相同風格 */
+    body {
+      margin: 0;
+      font-family: 'Noto Serif TC', 'EB Garamond', serif;
+      background-color: #fdf6ec;
+      color: #5d3a1a;
+      line-height: 1.6;
+    }
+    header {
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #5d3a1a;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .contact {
+      padding: 40px 20px;
+      max-width: 600px;
+      margin: auto;
+    }
+    .contact h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .contact label {
+      display: block;
+      margin-bottom: 5px;
+      margin-top: 15px;
+    }
+    .contact input, .contact textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ccc;
+      margin-bottom: 10px;
+      font-family: 'Noto Serif TC', 'EB Garamond', serif;
+    }
+    .contact button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #5d3a1a;
+      color: #fff;
+      cursor: pointer;
+    }
+    .social {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .social a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #5d3a1a;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="about.html">About</a>
+      <a href="books.html">Books</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <section class="contact">
+    <h1>聯絡我們 / Contact</h1>
+    <form>
+      <label for="name">姓名 Name</label>
+      <input type="text" id="name" placeholder="您的姓名">
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="您的郵件">
+      <label for="message">訊息 Message</label>
+      <textarea id="message" rows="5" placeholder="您的訊息"></textarea>
+      <button type="submit">送出</button>
+    </form>
+    <div class="social">
+      <!-- 社群連結圖示或文字 -->
+      <a href="#" title="Facebook">Facebook</a>
+      <a href="#" title="Twitter">Twitter</a>
+      <a href="#" title="Instagram">Instagram</a>
+    </div>
+  </section>
+  <footer>
+    &copy; 2025 Jiang Liang. All rights reserved.
+  </footer>
+</body>
+</html>

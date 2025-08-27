@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jiang Liang - 作家網站</title>
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&family=Noto+Serif+TC&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Noto Serif TC', 'EB Garamond', serif;
+      background-color: #fdf6ec; /* 米白色背景 */
+      color: #5d3a1a; /* 棕色文字 */
+      line-height: 1.6;
+    }
+    header {
+      padding: 20px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #5d3a1a;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    .hero {
+      padding: 60px 20px;
+      text-align: center;
+      background-color: #ffffff;
+    }
+    .hero blockquote {
+      font-size: 1.5em;
+      margin: 0;
+    }
+    .hero button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: none;
+      border: 2px solid #5d3a1a;
+      color: #5d3a1a;
+      font-size: 1em;
+      cursor: pointer;
+    }
+    .intro, .works, .subscribe {
+      padding: 40px 20px;
+      max-width: 800px;
+      margin: auto;
+    }
+    .intro p {
+      margin-bottom: 20px;
+    }
+    .works .book {
+      margin-bottom: 30px;
+    }
+    .works .book h3 {
+      margin-bottom: 5px;
+    }
+    .works .book .placeholder {
+      width: 100%;
+      height: 200px;
+      background-color: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #aaa;
+      font-size: 1em;
+      margin-bottom: 10px;
+    }
+    .subscribe input[type="email"] {
+      padding: 10px;
+      width: 70%;
+      max-width: 300px;
+      border: 1px solid #ccc;
+    }
+    .subscribe button {
+      padding: 10px 20px;
+      border: none;
+      background-color: #5d3a1a;
+      color: #fff;
+      cursor: pointer;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9em;
+    }
+    @media (max-width: 600px) {
+      .hero blockquote {
+        font-size: 1.2em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="about.html">About</a>
+      <a href="books.html">Books</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+  <section class="hero">
+    <blockquote id="quote">
+      <!-- 隨機金句，此處可替換或擴充 -->
+      <p>"靜水深流。"<br>"Still waters run deep."</p>
+    </blockquote>
+    <button onclick="newQuote()">換一句</button>
+  </section>
+  <section class="intro">
+    <h2>作者介紹 / Author Introduction</h2>
+    <p>這裡寫作家的中文介紹，可用溫柔詩意的語言描述作者背景、創作風格等。這段文字僅為示例，使用者可替換或擴充內容。</p>
+    <p>This is a bilingual author introduction in English. It can describe Jiang Liang's background and writing style in a gentle and poetic manner. This is placeholder text and can be replaced or expanded by the user.</p>
+  </section>
+  <section class="works">
+    <h2>代表作品 / Featured Works</h2>
+    <div class="book">
+      <div class="placeholder">此處放書封 1</div>
+      <h3>書名 Title of Book 1</h3>
+      <p>這裡是作品簡介。這本書的內容可簡要描述，溫柔且略帶孤寂的風格。</p>
+    </div>
+    <div class="book">
+      <div class="placeholder">此處放書封 2</div>
+      <h3>書名 Title of Book 2</h3>
+      <p>另一部作品簡介，介紹詩集或小說內容。用簡短的文字呈現主題和氛圍。</p>
+    </div>
+    <!-- 可增加第三本書或更多作品 -->
+  </section>
+  <section class="subscribe">
+    <h2>訂閱最新消息 / Subscribe</h2>
+    <p>訂閱以獲取作者的最新消息和作品更新。</p>
+    <input type="email" placeholder="輸入您的 Email">
+    <button>訂閱</button>
+  </section>
+  <footer>
+    &copy; 2025 Jiang Liang. All rights reserved.
+  </footer>
+
+  <script>
+    const quotes = [
+      {"zh": "靜水深流。", "en": "Still waters run deep."},
+      {"zh": "山有木兮木有枝，心悅君兮君不知。", "en": "In the mountains trees have branches, my heart adores you, yet you do not know."},
+      {"zh": "天涯共此時。", "en": "In the vast world, we share this moment together."},
+      {"zh": "一縷微笑渡人海。", "en": "A gentle smile crosses the sea of people."},
+      {"zh": "月下獨酌。", "en": "Drinking alone under the moon."}
+    ];
+    function newQuote() {
+      const i = Math.floor(Math.random() * quotes.length);
+      const q = quotes[i];
+      document.getElementById('quote').innerHTML = `<p>"${q.zh}"<br>"${q.en}"</p>`;
+    }
+  </script>
+</body>
+</html>
